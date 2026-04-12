@@ -1,31 +1,33 @@
-// Components
+// Imoprting Components
 import Layout from "../layout/layout";
 import Image from "../components/image";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "../index.css";
+import Button from "../components/button";
 
 export default function MainPage() {
   return (
     <>
       <Layout>
-        <div className="flex flex-1">
-          <section>
+        <div className="page-main-container">
+          <section className="page-main-text-container">
             {/*Dados mockados */}
-            <p>Gabriel Cássio Gomes Cileiro</p>
+            <h2>Olá, sou Gabriel Cássio</h2>
             <p>
-              Olá, sou formado em Técnico em Eletrônica, já participei deu 1
-              projeto de pesquisa, 2 de extensão e possuo uma Gradução em
-              Sistemas de Informação em andamento
+              Estudante pesquisador em Arquitetura e Design de Software, mas
+              também Designer de Hardware. Além de Aluno do CIN - UFPE em
+              Sistemas de Informação, sou um player da área de Games de Impacto
+              Histórico/Social.
             </p>
-            <p>Sistemas de Informação - Desenvolvimento de Software</p>
-            <p>Arquitetura e Design de Software</p>
-            <p>Email: gcgc@cin.ufpe.br</p>
+            <div className=""></div>
           </section>
-          <section>
+          <section className="page-main-image-container">
             <Image
               src="/src/assets/personal-photo.png"
               alt="Cássio image"
+              width={2000}
+              height={2000}
             ></Image>
           </section>
         </div>

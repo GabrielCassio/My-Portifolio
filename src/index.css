@@ -24,7 +24,7 @@
         @apply bg-(--body-color-bg) antialiased text-text-title;
     }
     section {
-        @apply flex flex-col justify-center  bg-(--body-color-bg) px-52 pt-4;
+        @apply flex flex-col justify-center  bg-(--body-color-bg);
     }
     header {
         @apply flex justify-center bg-(--header-color-bg);
@@ -35,7 +35,25 @@
     .header-content {
         @apply flex flex-row gap-20 items-center m-2;
     }
-    .section-content {
-        @apply flex flex-col justify-center items-center;
+
+    /* Page main classes */
+    .page-main-container {
+        @apply relative flex flex-1 flex-row justify-around;
+        /* Background effect */
+        @apply bg-linear-to-t/oklch from-sky-100 to-slate-100;
+    }
+    .page-main-text-container {
+        @apply relative left-20 flex flex-col text-balance text-justify px-16 z-1 bg-transparent;
+    }
+    .page-main-text-container h2 {
+        @apply text-lg md:text-2xl font-bold tracking-tight py-4;
+    }
+    .page-main-text-container p {
+        @apply text-sm md:text-2xl font-normal tracking-tight;
+    }
+    .page-main-image-container {
+        @apply relative flex flex-col justify-center items-center px-16 mt-auto z-0 bg-transparent;
+    }
+    .page-main-image-container {
     }
 }
