@@ -7,26 +7,24 @@
         Helvetica, Arial, sans-serif;
 
     /* default-colors layout */
-    --color-bg: #ffffff;
     --header-color-bg: #f5f5f7;
-    --section-color-bg: #f5f5f7;
+    --body-color-bg: #f5f5f7;
 
     /* default colors text*/
     --color-text-title: #1d1d1f;
-    --color-blue-highlight: #0071e3;
 }
 
 @layer base {
     /* Root structure modification*/
     #root {
-        @apply flex flex-col min-h-screen;
+        @apply flex flex-col min-h-screen overflow-x-hidden;
     }
     /* Css in normal structure HTML */
     body {
-        @apply bg-(--color-bg) antialiased text-text-title;
+        @apply bg-(--body-color-bg) antialiased text-text-title;
     }
     section {
-        @apply flex flex-col justify-center  bg-(--section-color-bg) px-52 pt-4;
+        @apply flex flex-col justify-center  bg-(--body-color-bg) px-52 pt-4;
     }
     header {
         @apply flex justify-center bg-(--header-color-bg);
