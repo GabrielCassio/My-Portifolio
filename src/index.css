@@ -1,145 +1,46 @@
 @import "tailwindcss";
-:root {
+
+@theme {
     /* font-family */
-    --font-display:
-        "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-        sans-serif;
-    --font-text:
-        "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-        sans-serif;
+    --font-sans:
+        "SF Pro Text", "SF Pro Display", "SF Pro Icons", "Helvetica Neue",
+        Helvetica, Arial, sans-serif;
 
-    /* sizes-fonts*/
-    --size-hero: 48px;
-    --size-title: 28px;
-    --size-heading: 22px;
-    --size-body: 17px;
-    --size-sm: 14px;
-    --size-caption: 12px;
+    /* default-colors layout */
+    --bg-color-root: ##fff;
+    --bg-color-section: #f5f5f7;
+    --bg-color-header: #ffffffcc;
 
-    --lh-display: 1.08;
-    --lh-heading: 1.18;
-    --lh-body: 1.47;
-
-    --weight-regular: 400;
-    --weight-semibold: 600;
-    --weight-bold: 700;
-
-    --color-text-primary: #1d1d1f;
-    --color-text-secondary: #424245;
-    --color-text-tertiary: #6e6e73;
-
-    --color-bg-page: #fbfbfd;
-    --color-bg-primary: #ffffff;
-    --color-bg-alt: #f5f5f7;
-
-    --color-border: rgba(0, 0, 0, 0.12);
-
-    --color-blue: #0071e3;
-    --color-blue-hover: #0077ed;
-
-    --radius-sm: 10px;
-    --radius-md: 18px;
-    --radius-pill: 980px;
-
-    --space-xs: 4px;
-    --space-sm: 8px;
-    --space-md: 16px;
-    --space-lg: 24px;
-    --space-xl: 48px;
-    --space-2xl: 80px;
-
-    --max-width: 1200px;
-
-    --ease-out: cubic-bezier(0, 0, 0.58, 1);
-    --duration: 0.24s;
+    /* default colors text*/
+    --color-text-title: #1d1d1f;
+    --color-blue-highlight: #0071e3;
 }
 
-/*@media (prefers-color-scheme: dark) {
-    :root {
-        --color-text-primary: #f5f5f7;
-        --color-text-secondary: #a1a1a6;
-        --color-text-tertiary: #6e6e73;
-
-        --color-bg-page: #000000;
-        --color-bg-primary: #1d1d1f;
-        --color-bg-alt: #111111;
-
-        --color-border: rgba(255, 255, 255, 0.1);
-
-        --color-blue: #2997ff;
-        --color-blue-hover: #30a0ff;
+@layer base {
+    body {
+        @apply bg-(--bg-color-root);
     }
-}*/
+    section {
+        @apply flex flex-col justify-center items-center bg-(--bg-color-section) h-100 px-50 pt-4;
+    }
+    header,
+    footer {
+        @apply flex justify-center bg-(--bg-color-header);
+    }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: var(--font-text);
-    font-size: var(--size-body);
-    font-weight: var(--weight-regular);
-    line-height: var(--lh-body);
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-page);
-    -webkit-font-smoothing: antialiased;
-}
-
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-@media (max-width: 1068px) {
-    .container {
-        padding-left: 32px;
-        padding-right: 32px;
+    header > p {
+        @apply font-extrabold;
     }
 }
 
-@media (max-width: 734px) {
-    .container {
-        padding-left: 16px;
-        padding-right: 16px;
+@layer components {
+    .header-content {
+        @apply flex flex-row gap-20 items-center m-2;
     }
-}
-
-.tile {
-    background-color: var(--color-bg-alt);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--color-blue);
-    color: #ffffff;
-    border-radius: var(--radius-pill);
-    padding: 14px 24px;
-    font-family: var(--font-text);
-    font-size: var(--size-body);
-    font-weight: var(--weight-regular);
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background-color var(--duration) var(--ease-out);
-}
-
-.btn:hover {
-    background-color: var(--color-blue-hover);
-}
-
-.link {
-    color: var(--color-blue);
-    text-decoration: none;
-}
-
-.link::after {
-    content: " ›";
+    .section-content {
+        @apply flex flex-col justify-center items-center m-2;
+    }
+    .footer-content {
+        @apply flex flex-row gap-20 items-center m-2;
+    }
 }
