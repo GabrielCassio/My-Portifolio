@@ -3,30 +3,34 @@ import { useRef, useState } from "react";
 const cards = [
   {
     id: 1,
-    title: "",
-    subtitle: "",
-    theme: "bg-white text-text-title",
+    project_name: "",
+    description: "",
+    subject: "",
+    theme: "bg-white text-text-project_name",
     imagePlaceholder: "bg-gray-100",
   },
   {
     id: 2,
-    title: "",
-    subtitle: "",
+    project_name: "",
+    description: "",
+    subject: "",
     theme: "bg-zinc-900 text-white",
     imagePlaceholder: "bg-zinc-800",
   },
   {
     id: 3,
-    title: "",
-    subtitle: "",
-    theme: "bg-blue-50 text-text-title",
+    project_name: "",
+    description: "",
+    subject: "",
+    theme: "bg-blue-50 text-text-project_name",
     imagePlaceholder: "bg-blue-100",
   },
   {
     id: 4,
-    title: "",
-    subtitle: "",
-    theme: "bg-rose-50 text-text-title",
+    project_name: "",
+    description: "",
+    subject: "",
+    theme: "bg-rose-50 text-text-project_name",
     imagePlaceholder: "bg-rose-100",
   },
 ];
@@ -86,9 +90,9 @@ const Carousel = () => {
           >
             <div className="relative z-10">
               <h3 className="text-2xl font-semibold tracking-tight">
-                {card.title}
+                {card.project_name}
               </h3>
-              <p className="mt-2 text-lg opacity-80">{card.subtitle}</p>
+              <p className="mt-2 text-lg opacity-80">{card.description}</p>
             </div>
 
             <div
