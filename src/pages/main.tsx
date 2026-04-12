@@ -1,5 +1,6 @@
 // Components
 import Layout from "../layout/layout";
+import Image from "../components/image";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "../index.css";
@@ -21,7 +22,12 @@ export default function MainPage() {
             <p>Arquitetura e Design de Software</p>
             <p>Email: gcgc@cin.ufpe.br</p>
           </section>
-          <section></section>
+          <section>
+            <Image
+              src="/src/assets/personal-photo.png"
+              alt="Cássio image"
+            ></Image>
+          </section>
         </div>
       </Layout>
     </>
