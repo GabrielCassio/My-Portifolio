@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef } from "react"; // Type to transfer props from a button to an anchor tag
 
 interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
   text: string;

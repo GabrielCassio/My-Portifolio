@@ -35,13 +35,13 @@ const Header = () => {
               onMouseEnter={() => mouseOnTab("Home")}
             />
             <Button
-              text="About"
+              text="Sobre"
               isToNav={true}
               path="/pages/about.html"
               onMouseEnter={() => mouseOnTab("About")}
             />
             <Button
-              text="Projects"
+              text="Projetos"
               isToNav={true}
               path="/pages/projects.html"
               onMouseEnter={() => mouseOnTab("Projects")}

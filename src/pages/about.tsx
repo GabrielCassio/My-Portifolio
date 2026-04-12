@@ -1,6 +1,5 @@
 // Importing Components
 import Layout from "../layout/layout";
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "../index.css";
@@ -17,6 +16,8 @@ export function AboutPage() {
     </Layout>
   );
 }
+
+export default AboutPage;
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
