@@ -4,8 +4,6 @@ import Image from "../components/image";
 import Card from "../components/card";
 
 // import NavLink from "../components/navlink";
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
 import "../index.css";
 
 const mainCards = [
@@ -29,7 +27,7 @@ const mainCards = [
   },
 ];
 
-export default function MainPage() {
+function MainPage() {
   return (
     <>
       <Layout>
@@ -66,8 +64,4 @@ export default function MainPage() {
   );
 }
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <MainPage />
-  </StrictMode>,
-);
+export default MainPage;

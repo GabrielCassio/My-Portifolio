@@ -41,14 +41,14 @@ const Header = () => {
               Home
             </NavLink>
             <NavLink
-              href="/pages/about.html"
+              href="/about.html"
               onMouseEnter={() => mouseOnTab("Sobre")}
               className="text-gl font-normal tracking-tight text-black"
             >
               Sobre
             </NavLink>
             <NavLink
-              href="/pages/projects.html"
+              href="/projects.html"
               onMouseEnter={() => mouseOnTab("Projetos")}
               className="text-gl font-normal tracking-tight text-black"
             >

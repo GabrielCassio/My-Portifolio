@@ -2,8 +2,6 @@
 import Layout from "../layout/layout";
 import Card from "../components/card";
 import NavLink from "../components/navlink";
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
 import "../index.css";
 
 const topicCards = [
@@ -57,7 +55,7 @@ const extrasCards = [
   },
 ];
 
-export function AboutPage() {
+function AboutPage() {
   return (
     <>
       <Layout>
@@ -101,9 +99,3 @@ export function AboutPage() {
 }
 
 export default AboutPage;
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <AboutPage />
-  </StrictMode>,
-);

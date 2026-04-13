@@ -1,11 +1,9 @@
 // Importing Components
 import Layout from "../layout/layout";
 import Carousel from "../components/carousel";
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
 import "../index.css";
 
-export function ProjectsPage() {
+function ProjectsPage() {
   return (
     <>
       <Layout>
@@ -17,8 +15,4 @@ export function ProjectsPage() {
   );
 }
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <ProjectsPage />
-  </StrictMode>,
-);
+export default ProjectsPage;
