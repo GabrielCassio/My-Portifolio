@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Button from "../components/navlink";
+// Importing Components
 import NavLink from "../components/navlink";
+import { useState } from "react";
 
 const Header = () => {
   // States of the header
@@ -8,9 +8,13 @@ const Header = () => {
   const [activeTab, setActiveTab] = useState("");
 
   const previewContentTabs = {
-    Home: ["Destaques", "Novidades"],
-    About: ["Minha História", "Educação"],
-    Projects: ["Web Design", "Mobile Apps"],
+    Home: ["Resumo", "Contatos"],
+    Sobre: [
+      "Minha Trajetória",
+      "Stacks Tecnológicas",
+      "Objetivos Profissionais",
+    ],
+    Projetos: ["Alguns Projetos", "Artigos", "Extensões"],
   };
 
   // handling functions of the Header
@@ -29,18 +33,24 @@ const Header = () => {
         <header>
           {/* Normal state of header*/}
           <div className="header-content">
-            <NavLink href="/" onMouseEnter={() => mouseOnTab("Home")}>
+            <NavLink
+              href="/"
+              onMouseEnter={() => mouseOnTab("Home")}
+              className="text-gl font-normal tracking-tight text-black"
+            >
               Home
             </NavLink>
             <NavLink
               href="/pages/about.html"
-              onMouseEnter={() => mouseOnTab("About")}
+              onMouseEnter={() => mouseOnTab("Sobre")}
+              className="text-gl font-normal tracking-tight text-black"
             >
               Sobre
             </NavLink>
             <NavLink
               href="/pages/projects.html"
-              onMouseEnter={() => mouseOnTab("Projects")}
+              onMouseEnter={() => mouseOnTab("Projetos")}
+              className="text-gl font-normal tracking-tight text-black"
             >
               Projetos
             </NavLink>
@@ -67,12 +77,9 @@ const Header = () => {
                   activeTab as keyof typeof previewContentTabs
                 ]?.map((item) => (
                   <li key={item}>
-                    <a
-                      href="#"
-                      className="text-xl font-semibold text-gray-900 hover:text-blue-higlight transition-colors"
-                    >
+                    <p className="text-xl font-semibold text-gray-900 transition-colors">
                       {item}
-                    </a>
+                    </p>
                   </li>
                 ))}
             </ul>
