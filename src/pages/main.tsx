@@ -2,6 +2,7 @@
 import Layout from "../layout/layout";
 import Image from "../components/image";
 import Card from "../components/card";
+
 // import NavLink from "../components/navlink";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
@@ -41,6 +42,7 @@ export default function MainPage() {
                   key={card.titleCard}
                   titleCard={card.titleCard}
                   contentCard={card.contentCard}
+                  className="my-4 ml-16"
                 />
               );
             })}

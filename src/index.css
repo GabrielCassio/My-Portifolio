@@ -59,4 +59,15 @@
     .page-main-image-container {
         @apply relative flex flex-col justify-center items-center text-center px-28 mt-auto z-0 bg-transparent;
     }
+
+    /* About */
+    .about-container {
+        @apply flex flex-row justify-around my-8 mx-16;
+    }
+    .about-topics-container {
+        @apply flex flex-1 gap-y-8 text-justify;
+    }
+    .about-extras-content {
+        @apply flex flex-col justify-start items-center;
+    }
 }
