@@ -4,7 +4,7 @@ import Image from "../components/image";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "../index.css";
-import Button from "../components/button";
+import NavLink from "../components/navlink";
 
 export default function MainPage() {
   return (
@@ -20,7 +20,20 @@ export default function MainPage() {
               Sistemas de Informação, sou um player da área de Games de Impacto
               Histórico/Social.
             </p>
-            <div className=""></div>
+            <div className="page-main-icons">
+              <NavLink
+                href="https://github.com/GabrielCassio"
+                icon="https://img.icons8.com/3d-sugary/100/github.png"
+              ></NavLink>
+              <NavLink
+                href="www.linkedin.com/in/gabrielcássio"
+                icon="https://img.icons8.com/3d-sugary/100/linkedin.png"
+              ></NavLink>
+              <NavLink
+                href=""
+                icon="https://img.icons8.com/3d-sugary/100/gmail-logo.png"
+              ></NavLink>
+            </div>
           </section>
           <section className="page-main-image-container">
             <Image

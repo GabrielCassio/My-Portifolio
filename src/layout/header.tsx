@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Button from "../components/button";
+import Button from "../components/navlink";
+import NavLink from "../components/navlink";
 
 const Header = () => {
   // States of the header
@@ -28,24 +29,21 @@ const Header = () => {
         <header>
           {/* Normal state of header*/}
           <div className="header-content">
-            <Button
-              text="Home"
-              isToNav={true}
-              path="/"
-              onMouseEnter={() => mouseOnTab("Home")}
-            />
-            <Button
-              text="Sobre"
-              isToNav={true}
-              path="/pages/about.html"
+            <NavLink href="/" onMouseEnter={() => mouseOnTab("Home")}>
+              Home
+            </NavLink>
+            <NavLink
+              href="/pages/about.html"
               onMouseEnter={() => mouseOnTab("About")}
-            />
-            <Button
-              text="Projetos"
-              isToNav={true}
-              path="/pages/projects.html"
+            >
+              Sobre
+            </NavLink>
+            <NavLink
+              href="/pages/projects.html"
               onMouseEnter={() => mouseOnTab("Projects")}
-            />
+            >
+              Projetos
+            </NavLink>
           </div>
         </header>
 
