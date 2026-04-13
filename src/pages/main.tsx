@@ -12,7 +12,6 @@ export default function MainPage() {
       <Layout>
         <div className="page-main-container">
           <section className="page-main-text-container">
-            {/*Dados mockados */}
             <h2>Olá, sou Gabriel Cássio</h2>
             <p>
               Estudante pesquisador em Arquitetura e Design de Software, mas
@@ -39,8 +38,8 @@ export default function MainPage() {
             <Image
               src="/src/assets/personal-photo.png"
               alt="Cássio image"
-              width={2000}
-              height={2000}
+              width={1200}
+              height={1200}
             ></Image>
           </section>
         </div>
