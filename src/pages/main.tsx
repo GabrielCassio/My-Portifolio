@@ -1,40 +1,56 @@
 // Imoprting Components
 import Layout from "../layout/layout";
 import Image from "../components/image";
+import Card from "../components/card";
+// import NavLink from "../components/navlink";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "../index.css";
-import NavLink from "../components/navlink";
+
+const mainCards = [
+  {
+    titleCard: "Formação Tecnológica",
+    contentCard:
+      "Aluno de Sistemas de Informação no Centro de Informática da UFPE (CIn), construindo uma base sólida em tecnologia e computação",
+    imageCard: "",
+  },
+  {
+    titleCard: "Arquitetura & Hardware",
+    contentCard:
+      "Estudante pesquisador focado em Arquitetura e Design de Software, com atuação complementar e visão prática como Designer de Hardware.",
+    imageCard: "",
+  },
+  {
+    titleCard: "Games de Impacto",
+    contentCard:
+      "Player e entusiasta na área de Games focados em Impacto Histórico e Social, unindo tecnologia a narrativas transformadoras.",
+    imageCard: "",
+  },
+];
 
 export default function MainPage() {
   return (
     <>
       <Layout>
         <div className="page-main-container">
-          <section className="page-main-text-container">
-            <h2>Olá, sou Gabriel Cássio</h2>
-            <p>
-              Estudante pesquisador em Arquitetura e Design de Software, mas
-              também Designer de Hardware. Além de Aluno do CIN - UFPE em
-              Sistemas de Informação, sou um player da área de Games de Impacto
-              Histórico/Social.
-            </p>
-            <div className="page-main-icons">
-              <NavLink
-                href="https://github.com/GabrielCassio"
-                icon="https://img.icons8.com/3d-sugary/100/github.png"
-              ></NavLink>
-              <NavLink
-                href="www.linkedin.com/in/gabrielcássio"
-                icon="https://img.icons8.com/3d-sugary/100/linkedin.png"
-              ></NavLink>
-              <NavLink
-                href=""
-                icon="https://img.icons8.com/3d-sugary/100/gmail-logo.png"
-              ></NavLink>
-            </div>
-          </section>
+          {/*Render all cards of the main*/}
+          <div>
+            {mainCards.map((card) => {
+              return (
+                <Card
+                  key={card.titleCard}
+                  titleCard={card.titleCard}
+                  contentCard={card.contentCard}
+                />
+              );
+            })}
+          </div>
           <section className="page-main-image-container">
+            <div className="group flex items-center gap-4 p-6 rounded-2xl">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[#1d1d1f] tracking-tight">
+                Gabriel Cássio
+              </h1>
+            </div>
             <Image
               src="/src/assets/personal-photo.png"
               alt="Cássio image"

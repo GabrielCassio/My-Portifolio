@@ -57,6 +57,6 @@
     }
     /* image */
     .page-main-image-container {
-        @apply relative flex flex-col justify-center items-center px-32 mt-auto z-0 bg-transparent;
+        @apply relative flex flex-col justify-center items-center text-center px-28 mt-auto z-0 bg-transparent;
     }
 }
