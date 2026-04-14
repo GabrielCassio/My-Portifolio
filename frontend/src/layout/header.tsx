@@ -34,7 +34,7 @@ const Header = () => {
           {/* Normal state of header*/}
           <div className="flex flex-row justify-center gap-20">
             <NavLink
-              href="/"
+              href="./index.html"
               onMouseEnter={() => mouseOnTab("Home")}
               className="text-gl font-normal tracking-tight text-black"
             >

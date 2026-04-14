@@ -46,6 +46,7 @@ class GithubReposAPI {
 
   // Get 6 lasts repos
   // async getLasts() {
+  //   if (state == "LOADING") return;
   //   this.state = "LOADING";
   //   this.pingToComponents();
   //   try {
