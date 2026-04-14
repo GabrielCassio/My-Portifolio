@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from "react";
-import GithubReposAPI from "/My-Portifolio/api/index";
 import type { Repo, ReqState } from "/My-Portifolio/api/index";
+import GithubReposAPI from "/My-Portifolio/api/index";
+import ScrollableCard from "./scrollable-card";
+// import NavLink from "./navlink";
 
 const Carousel = () => {
   // Data of the current promise
@@ -51,7 +53,7 @@ const Carousel = () => {
   if (state === "LOADING" && repos.length === 0) {
     return (
       <div className="flex h-96 items-center justify-center text-2xl font-bold">
-        <span>Farejando repositórios...</span>
+        <span>Analisando repositórios, One moment...</span>
       </div>
     );
   }
@@ -59,14 +61,14 @@ const Carousel = () => {
   if (state === "ERROR") {
     return (
       <div className="flex h-96 items-center justify-center text-red-500">
-        <span>Erro ao carregar a alcateia de projetos.</span>
+        <span>E... Erro em carregar conjunto de projetos.</span>
       </div>
     );
   }
 
   return (
     <div className="flex flex-1 w-full py-12 overflow-hidden select-none">
-      <div className="max-w-5xl mx-auto pl-4 md:px-12 mb-8">
+      <div className="max-w-5xl mx-auto pl-4 md:pl-12 md:pr-2  mb-8">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
           Alguns Projetos Simples.
         </h2>
@@ -85,25 +87,15 @@ const Carousel = () => {
         }`}
       >
         {repos.map((card) => (
-          <div
-            key={card.name}
-            className={`relative shrink-0 w-[85vw] md:w-[300px] h-[400px] snap-center md:snap-start rounded-[2.5rem] p-8 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 ${"bg-slate-800"} ${
-              isDragging ? "pointer-events-none" : ""
-            }`}
-          >
-            <div className="relative z-10">
-              <h3 className="text-2xl font-semibold tracking-tight">
-                {card.name}
-              </h3>
-              <p className="mt-2 text-lg opacity-80">{card.description}</p>
-            </div>
-
-            <div
-              className={`absolute bottom-0 left-0 right-0 h-3/5 ${card.html_url} rounded-t-[2.5rem] mt-auto`}
-            />
-          </div>
+          <ScrollableCard
+            titleCard={card.name}
+            contentCard={card.description}
+            isDragging={isDragging}
+            href={card.html_url}
+            bgColorCard=""
+            boxColorCard="bg-pink-400"
+          />
         ))}
-        <div className="shrink-0 w-6 md:w-12" />
       </div>
     </div>
   );

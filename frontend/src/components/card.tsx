@@ -1,7 +1,7 @@
 import type { HtmlHTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 
-interface CardProps extends HtmlHTMLAttributes<"div"> {
+export interface CardProps extends HtmlHTMLAttributes<"div"> {
   titleCard: string;
   contentCard: string;
   imageCard?: string;
