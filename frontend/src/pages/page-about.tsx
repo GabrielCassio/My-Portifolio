@@ -4,6 +4,9 @@ import Card from "../components/card";
 import NavLink from "../components/navlink";
 import "../index.css";
 
+// Importing Logos
+import { LogoSeal, LogoLaje, LogoMalungoGame, LogoMalungoLab } from "../assets";
+
 const topicCards = [
   {
     titleCard: "Minha Trajetória Acadêmica",
@@ -31,27 +34,27 @@ const extrasCards = [
     titleCard: "SEAL",
     contentCard:
       "Diretor de Ensino e Pesquisador da Liga Acadêmica de Engenharia de Software.",
-    imageCard: "/src/assets/seal-logo.jpg",
+    imageCard: LogoSeal,
   },
   {
     href: "https://www.instagram.com/laje.ufpe/?hl=",
     titleCard: "LAJE",
     contentCard: "Membro da Liga Acadêmica de Jogos Eletrônicos.",
-    imageCard: "/src/assets/laje-logo.png",
+    imageCard: LogoLaje,
   },
   {
     href: "https://www.instagram.com/malungogame/?hl=",
     titleCard: "MalungoGame",
     contentCard:
       "Fundador do Projeto de Extensão voltado para Gamificação Histórico-Social do Instituto Federal de Pernambuco - Campus Recife.",
-    imageCard: "/src/assets/malungogame-logo.png",
+    imageCard: LogoMalungoGame,
   },
   {
     href: "https://malungolab.com/",
     titleCard: "MalungoLab",
     contentCard:
       "Colaborador Externo do Laboratório de Humanidades Digitais e Inovação Social.",
-    imageCard: "/src/assets/malungo-logo.png",
+    imageCard: LogoMalungoLab,
   },
 ];
 
@@ -59,22 +62,20 @@ function AboutPage() {
   return (
     <>
       <Layout>
-        <div className="about-container">
-          <section className="about-topics-container">
-            <div>
-              {topicCards.map((card) => {
-                return (
-                  <Card
-                    key={card.titleCard}
-                    titleCard={card.titleCard}
-                    contentCard={card.contentCard}
-                    className="my-4"
-                  />
-                );
-              })}
-            </div>
+        <div className=" bg-(--about-page-color-bg) flex flex-row">
+          <section className="flex flex-1 flex-col justify-center items-center mt-16">
+            {topicCards.map((card) => {
+              return (
+                <Card
+                  key={card.titleCard}
+                  titleCard={card.titleCard}
+                  contentCard={card.contentCard}
+                  className="my-4"
+                />
+              );
+            })}
           </section>
-          <section className="about-extras-content">
+          <section className="flex flex-1 flex-col justify-start items-center mt-16">
             <h2>Meus projetos</h2>
             <div>
               {extrasCards.map((card) => {

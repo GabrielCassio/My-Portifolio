@@ -29,10 +29,10 @@ const Header = () => {
 
   return (
     <>
-      <div className="relative z-50" onMouseLeave={closeMenu}>
+      <div className="relative p-2 z-50" onMouseLeave={closeMenu}>
         <header>
           {/* Normal state of header*/}
-          <div className="header-content">
+          <div className="flex flex-row justify-center gap-20">
             <NavLink
               href="/"
               onMouseEnter={() => mouseOnTab("Home")}
@@ -41,14 +41,14 @@ const Header = () => {
               Home
             </NavLink>
             <NavLink
-              href="/about.html"
+              href="./about.html"
               onMouseEnter={() => mouseOnTab("Sobre")}
               className="text-gl font-normal tracking-tight text-black"
             >
               Sobre
             </NavLink>
             <NavLink
-              href="/projects.html"
+              href="./projects.html"
               onMouseEnter={() => mouseOnTab("Projetos")}
               className="text-gl font-normal tracking-tight text-black"
             >

@@ -2,6 +2,7 @@
 import Layout from "../layout/layout";
 import Image from "../components/image";
 import Card from "../components/card";
+import { PersonalPhoto } from "../assets";
 
 // import NavLink from "../components/navlink";
 import "../index.css";
@@ -29,38 +30,43 @@ const mainCards = [
 
 function MainPage() {
   return (
-    <>
-      <Layout>
-        <div className="page-main-container">
-          {/*Render all cards of the main*/}
-          <div>
+    <Layout>
+      <div className=" bg-yellow-400 flex flex-1 flex-row justify-center px-8 pt-12 gap-x-16">
+        {/*Render all cards of the main*/}
+        <section className="flex justify-center">
+          <div
+            className="flex flex-col justify-center rounded-4xl text-justify gap-y-4 z-1
+          sm: mx-auto
+          "
+          >
             {mainCards.map((card) => {
               return (
                 <Card
                   key={card.titleCard}
                   titleCard={card.titleCard}
                   contentCard={card.contentCard}
-                  className="my-4 ml-16"
+                  className="h-xl"
                 />
               );
             })}
           </div>
-          <section className="page-main-image-container">
-            <div className="group flex items-center gap-4 p-6 rounded-2xl">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-[#1d1d1f] tracking-tight">
-                Gabriel Cássio
-              </h1>
-            </div>
+        </section>
+        <section className="flex flex-col items-center z-0 w-xl mt-4">
+          <div className="gap-4 p-6 rounded-2xl">
+            <h1 className="text-4xl text-nowrap md:text-5xl font-extrabold text-text-title tracking-tight">
+              Gabriel Cássio
+            </h1>
+          </div>
+          <div className="relative block w-full h-full">
             <Image
-              src="/src/assets/personal-photo.png"
+              className="absolute inset-0 bottom-0 w-full h-full object-fit object-cover"
+              src={PersonalPhoto}
               alt="Cássio image"
-              width={1200}
-              height={1200}
-            ></Image>
-          </section>
-        </div>
-      </Layout>
-    </>
+            />
+          </div>
+        </section>
+      </div>
+    </Layout>
   );
 }
 

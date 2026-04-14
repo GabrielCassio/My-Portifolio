@@ -6,10 +6,11 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "./",
   build: {
-    rolldownOptions: {
+    rollupOptions: {
       input: {
-        main: resolve(import.meta.dirname, "index.html/"),
+        main: resolve(import.meta.dirname, "index.html"),
         about: resolve(import.meta.dirname, "about.html"),
         projects: resolve(import.meta.dirname, "projects.html"),
       },
